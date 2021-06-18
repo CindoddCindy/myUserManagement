@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.security.Permission;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,12 +14,13 @@ import java.util.List;
 @NoArgsConstructor
 public class Role {
 
-    public static final long BRANCH_MANAGER = 1;
-    public static final long FINANCIAL_PLANING = 2;
-    public static final long REMARKETING = 3;
-    public static final long CARD_OPERATION = 4;
-    public static final long BUSINESS_DEVELOPMENT = 5;
-    public static final long COMMERCIAL_LENDING = 6;
+    public static final long SUPER_USER=1;
+    public static final long BRANCH_MANAGER = 2;
+    public static final long FINANCIAL_PLANING = 3;
+    public static final long REMARKETING = 4;
+    public static final long CARD_OPERATION = 5;
+    public static final long BUSINESS_DEVELOPMENT = 6;
+    public static final long COMMERCIAL_LENDING = 7;
 
 
 

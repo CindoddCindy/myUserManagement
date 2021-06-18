@@ -1,5 +1,7 @@
 package com.myusermanagement.tryusermanagement.user.entities;
 
+import com.myusermanagement.tryusermanagement.user.exception.InvalidAdminLevelException;
+
 public enum AdminLevel {
 
 
@@ -28,12 +30,12 @@ public enum AdminLevel {
         return adminLevel;
     }
 
-    public static AdminLevel getValidAdminGender(String adminLevelName) {
+    public static AdminLevel getValidAdminLevel(String adminLevelName) {
         AdminLevel adminLevel;
         try {
             adminLevel = AdminLevel.valueOf(adminLevelName);
         } catch(IllegalArgumentException ex) {
-            throw new InvalidGenderException(String.format("Invalid admin level string %s. Are supported only: Six Type Admin level strings", adminLevelName));
+            throw new InvalidAdminLevelException(String.format("Invalid admin level string %s. Are supported only: Six Type Admin level strings", adminLevelName));
         }
         return adminLevel;
     }

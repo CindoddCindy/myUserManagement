@@ -13,6 +13,8 @@ public class BankBranchAddress {
     @Column(name="user_id")
     private Long userId;
 
+
+
     @Column(name="province")
     private String province;
 

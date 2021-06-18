@@ -27,11 +27,18 @@ public class User {
     @Column(name="nik", nullable = false)
     private String nik;
 
+    @Enumerated
+    @Column(columnDefinition = "tinyint")
+    private AdminLevel adminLevel;
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private BankBranchAddress bankBranchAddress;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private BankContact bankContact;
+
+    @Column(name="secured")
+    private boolean secured;
 
 
     @Basic
@@ -49,6 +56,5 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
-    @Column(name="secured")
-    private boolean secured;
+
 }

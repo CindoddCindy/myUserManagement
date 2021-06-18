@@ -12,9 +12,9 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Permissions {
+public class Permission {
 
-    public Permissions(Long id, String permission) {
+    public Permission(Long id, String permission) {
         this.id = id;
         this.permission = permission;
     }
@@ -32,6 +32,5 @@ public class Permissions {
     @Column(name="enabled")
     private boolean enabled = true;
 
-    @Column(name="note")
-    private String note;
+
 }
