@@ -28,7 +28,7 @@ public class User {
     private String nik;
 
     @Enumerated
-    @Column(columnDefinition = "tinyint")
+    @Column(columnDefinition = "smallint")
     private AdminLevel adminLevel;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)

@@ -43,6 +43,8 @@ public class UserService {
     @Value("${microservice.security.salt}")
     private String salt;
 
+
+
     private PasswordValidator passwordValidator;
     private EmailValidator emailValidator;
     private PhoneValidator phoneValidator;

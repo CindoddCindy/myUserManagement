@@ -1,14 +1,14 @@
 package com.myusermanagement.tryusermanagement.user.repository;
 
 import com.myusermanagement.tryusermanagement.user.entities.Permission;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface PermissionsRepository extends JpaRepository<Permission, Long> {
+public interface PermissionsRepository extends CrudRepository<Permission, Long> {
 
     Optional<Permission> findByPermission(String permission);
 
